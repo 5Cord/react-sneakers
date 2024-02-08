@@ -1,0 +1,125 @@
+h1 {
+    color: #000;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.card {
+    width: 360px;
+    height: 410px;
+    flex-shrink: 0;
+    border-radius: 40px;
+    border: 1px solid #F3F3F3;
+    background: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+
+    position: relative;
+    top: 0;
+    padding-bottom: 40px;
+}
+
+.card:hover {
+    top: -5px;
+    box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, 0.103)
+}
+
+.containerImgCard {
+    text-align: center;
+}
+
+.card img {
+    width: 253px;
+    flex-shrink: 0;
+}
+
+.titleCard {
+    color: #000;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 150px;
+}
+
+.titlePriceCard {
+    color: #BDBDBD;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.pricePriceCard {
+    color: #000;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.addButton {
+    width: 40px;
+    height: 40px;
+    color: #D3D3D3;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    border: 1px solid #D3D3D3;
+    font-size: 135%;
+}
+
+.addButtonGreen {
+    width: 40px;
+    height: 40px;
+    color: #00ff11;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    border: 1px solid #D3D3D3;
+    font-size: 135%;
+    background-color: #daffda;
+}
+
+.downBlockCard {
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.favoriteGreen path{
+    stroke: #ff6868;
+}
+.favoriteGreen{
+    position: absolute;
+    border-radius: 7px;
+    border: 1px solid #F8F8F8;
+    background: rgb(255, 247, 247);
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    top: 40px;
+}
+
+.favorite {
+    position: absolute;
+    border-radius: 7px;
+    border: 1px solid #F8F8F8;
+    background: #FFF;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    top: 40px;
+}
