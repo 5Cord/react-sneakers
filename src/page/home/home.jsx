@@ -1,5 +1,4 @@
 import React from 'react';
-import AppContext from '../../context';
 import Card from '../../widgets/card/card'
 import cl from './home.module.scss'
 function Home({

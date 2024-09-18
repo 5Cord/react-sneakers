@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, {useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import cl from './App.module.scss'
 import axios from 'axios'
@@ -56,7 +56,7 @@ function App() {
 
 	const onAddToCart = async (obj) => {
 		try {
-			const findItem = cartItems.find((item) => Number(item.parentId) === Number(obj.id));
+			const findItem = cartItems.find((item) => Number(item.parentId) == Number(obj.id));
 			if (findItem) {
 				setCartItems((prev) => prev.filter((item) => Number(item.parentId) !== Number(obj.id)));
 				await axios.delete(`https://659d2ff8633f9aee7908d87b.mockapi.io/cart/${findItem.id}`);
