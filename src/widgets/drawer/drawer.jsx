@@ -29,7 +29,7 @@ function Drawer({ onClose, onRemove, items = [] }) {
 							</div>
 						))
 					) : (null)}
-					{items.length == 0 ? (<Info title="Корзина пустая" description="" image="" />) : (null)}
+					{items.length === 0 ? (<Info title="Корзина пустая" description="" image="" />) : (null)}
 
 				</div>
 				{items.length > 0 ? (<div className={cl.downBlock}>

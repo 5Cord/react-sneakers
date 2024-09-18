@@ -56,7 +56,7 @@ function App() {
 
 	const onAddToCart = async (obj) => {
 		try {
-			const findItem = cartItems.find((item) => Number(item.parentId) == Number(obj.id));
+			const findItem = cartItems.find((item) => Number(item.parentId) === Number(obj.id));
 			if (findItem) {
 				setCartItems((prev) => prev.filter((item) => Number(item.parentId) != Number(obj.id)));
 				await axios.delete(`https://659d2ff8633f9aee7908d87b.mockapi.io/cart/${findItem.id}`);
@@ -65,7 +65,7 @@ function App() {
 				const { data } = await axios.post('https://659d2ff8633f9aee7908d87b.mockapi.io/cart', obj);
 				setCartItems((prev) =>
 					prev.map((item) => {
-						if (item.parentId == data.parentId) {
+						if (item.parentId === data.parentId) {
 							return {
 								...item,
 								id: data.id,
@@ -94,7 +94,7 @@ function App() {
 
 	const onAddToFavorite = async (obj) => {
 		try {
-			if (favorites.find((favObj) => Number(favObj.id) == Number(obj.id))) {
+			if (favorites.find((favObj) => Number(favObj.id) === Number(obj.id))) {
 				axios.delete(`https://3afba98d0805fc4e.mokky.dev/favorites/${obj.id}`);
 				setFavorites((prev) => prev.filter((item) => Number(item.id) != Number(obj.id)));
 			} else {
@@ -115,7 +115,7 @@ function App() {
 	}
 
 	const isItemAdded = (id) => {
-		return cartItems.some((obj) => Number(obj.parentId) == Number(id));
+		return cartItems.some((obj) => Number(obj.parentId) === Number(id));
 	};
 
 	return (
